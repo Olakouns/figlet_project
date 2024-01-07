@@ -1,0 +1,12 @@
+
+<div>
+  <select data-testid="fig-fonts" [(ngModel)]="currentFront" (change)="onSelectDataChange()">
+    <option [value]="font" *ngFor="let font of fonts">{{font}}</option>
+  </select>
+  <input matInput type="text" [(ngModel)]="currentValue" data-testid="fig-input" (keyup)="onInputDataChange()"
+         (keydown.enter)="onInputDataChange()"/>
+
+</div>
+
+<pre [innerHTML]="result" style="font-family: monospace !important;" data-testid="fig-text">
+</pre>
